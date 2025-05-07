@@ -19,6 +19,7 @@ const password = ref("");
 const mensagem = ref("");
 const mensagemCor = ref("green");
 const auth = useAuthStore();
+
 const counter = useCounterStore();
 
 function verificarLogin(user, password) {
@@ -31,7 +32,6 @@ function verificarLogin(user, password) {
   auth.login();
   console.log("INcremento");
   counter.increment();
-  console.log("Valores depois da chamada: ", user, password);
 }
 </script>
 
