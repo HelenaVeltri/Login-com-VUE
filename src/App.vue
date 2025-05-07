@@ -12,6 +12,7 @@ export default {
   components: {
     Login,
   },
+  //teste com
 };
 </script>
 
