@@ -1,10 +1,31 @@
 <template>
-  <div class="login-container">
-    <h2>LOGIN</h2>
-    <input type="text" v-model="user" placeholder="Usuário" />
-    <input type="password" v-model="password" placeholder="Senha" />
-    <button @click="verificarLogin(user, password)">Entrar</button>
-    <div :style="{ color: mensagemCor }">{{ mensagem }}</div>
+  <div class="main-container">
+    <div class="login-container">
+      <h2>LOGIN</h2>
+      <input type="text" v-model="user" placeholder="Insira seu usuário..." />
+      <input
+        type="password"
+        v-model="password"
+        placeholder="Insira a sua senha..."
+      />
+      <button @click="verificarLogin(user, password)">Entrar</button>
+      <div :style="{ color: mensagemCor }">{{ mensagem }}</div>
+    </div>
+    <div class="validation-container">
+      <h2>Validação de Login</h2>
+      <div style="color: black" v-html="msg_authentication"></div>
+      <div style="color: black">
+        {{ "Número de tentativas totais: " + counter.count }}
+      </div>
+      <h2>Histórico de Usuários</h2>
+      <ul v-if="auth.loginHistory && auth.loginHistory.length > 0">
+        <li v-for="(entry, index) in auth.loginHistory" :key="index">
+          Login: {{ entry.user }} | Senha: {{ entry.password }}
+        </li>
+      </ul>
+      <div v-else>Nenhum login realizado.</div>
+      <div v-if="auth.loginHistory.length === 0">Nenhum login realizado.</div>
+    </div>
   </div>
 </template>
 
@@ -19,45 +40,57 @@ const password = ref("");
 const mensagem = ref("");
 const mensagemCor = ref("green");
 const auth = useAuthStore();
-
 const counter = useCounterStore();
+const msg_authentication = ref("");
 
 function verificarLogin(user, password) {
   const resultado = loginHandler(user, password);
   mensagem.value = resultado.mensagem;
   mensagemCor.value = resultado.cor;
-
-  auth.user = user;
-  auth.password = password;
-  auth.login();
-  console.log("INcremento");
+  msg_authentication.value = resultado.msg_authentication;
+  auth.login(user, password);
   counter.increment();
+  counter.count;
 }
 </script>
 
 <style scoped>
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: rgb(0, 139, 139);
+  margin: 0;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(0, 139, 139);
 }
-.login-container {
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Espaçamento entre os blocos */
+}
+
+.login-container,
+.validation-container {
   background: white;
   padding: 20px 40px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.994);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.994);
 }
+
 h2 {
   text-align: center;
 }
+
 input {
   display: inline-block;
   margin-bottom: 15px;
   padding: 10px;
   width: 100%;
 }
+
 button {
   padding: 10px;
   width: 100%;
