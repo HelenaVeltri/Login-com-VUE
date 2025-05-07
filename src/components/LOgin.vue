@@ -24,7 +24,6 @@
         </li>
       </ul>
       <div v-else>Nenhum login realizado.</div>
-      <div v-if="auth.loginHistory.length === 0">Nenhum login realizado.</div>
     </div>
   </div>
 </template>
