@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <Login />
+    <div id="nav">
+      <RouterLink to="/">Login</RouterLink> |
+      <RouterLink to="/home">Home</RouterLink>
+    </div>
+    <main>
+      <RouterView />
+    </main>
   </div>
 </template>
 
 <script>
-import Login from "./components/LOgin.vue";
-
 export default {
-  name: "LoginPagina",
-  components: {
-    Login,
-  },
-  //teste com
+  name: "App",
 };
 </script>
 
@@ -20,5 +20,11 @@ export default {
 body {
   margin: 0;
   background-color: rgb(0, 139, 139);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#nav {
+  padding: 30px;
 }
 </style>

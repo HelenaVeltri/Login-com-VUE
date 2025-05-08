@@ -9,6 +9,9 @@
         placeholder="Insira a sua senha..."
       />
       <button @click="verificarLogin(user, password)">Entrar</button>
+      <div v-if="counter.count === 1">
+        <button @click="goToHomePage">Home Page</button>
+      </div>
       <div :style="{ color: mensagemCor }">{{ mensagem }}</div>
     </div>
     <div class="validation-container">
@@ -33,6 +36,7 @@ import { ref } from "vue";
 import { verificarLogin as loginHandler } from "../scripts/loginHandler.js";
 import { useAuthStore } from "@/stores/auth";
 import { useCounterStore } from "@/stores/counter";
+import { useRouter } from "vue-router";
 
 const user = ref("");
 const password = ref("");
@@ -41,6 +45,7 @@ const mensagemCor = ref("green");
 const auth = useAuthStore();
 const counter = useCounterStore();
 const msg_authentication = ref("");
+const router = useRouter();
 
 function verificarLogin(user, password) {
   const resultado = loginHandler(user, password);
@@ -50,6 +55,9 @@ function verificarLogin(user, password) {
   auth.login(user, password);
   counter.increment();
   counter.count;
+}
+function goToHomePage() {
+  router.push("/home");
 }
 </script>
 
@@ -97,5 +105,6 @@ button {
   color: white;
   border: none;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 </style>
