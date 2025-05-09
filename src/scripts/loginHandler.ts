@@ -1,14 +1,14 @@
-export function verificarLogin(user, password) {
-  console.log("Usuário:", user);
+export function verificarLogin(email, password) {
+  console.log("Email:", email);
   console.log("Senha:", password);
 
-  if (user && password) {
+  if (email && password) {
     return {
       mensagem: "Bem vindo!",
       cor: "green",
       msg_authentication:
-        "Autenticação com sucesso!<br> Login:" +
-        user +
+        "Autenticação com sucesso!<br> Email:" +
+        email +
         "<br> Senha: " +
         password,
     };

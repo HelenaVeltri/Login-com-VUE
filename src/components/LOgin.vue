@@ -2,7 +2,7 @@
   <div class="main-container">
     <div class="login-container">
       <h2>LOGIN</h2>
-      <input type="text" v-model="user" placeholder="Insira seu usuário..." />
+      <input type="text" v-model="email" placeholder="Insira seu email..." />
       <input
         type="password"
         v-model="password"
@@ -33,12 +33,12 @@
 
 <script setup>
 import { ref } from "vue";
-import { verificarLogin as loginHandler } from "../scripts/loginHandler.js";
+import { verificarLogin as loginHandler } from "../scripts/loginHandler.ts";
 import { useAuthStore } from "@/stores/auth";
 import { useCounterStore } from "@/stores/counter";
 import { useRouter } from "vue-router";
 
-const user = ref("");
+const email = ref("");
 const password = ref("");
 const mensagem = ref("");
 const mensagemCor = ref("green");
@@ -47,12 +47,12 @@ const counter = useCounterStore();
 const msg_authentication = ref("");
 const router = useRouter();
 
-function verificarLogin(user, password) {
-  const resultado = loginHandler(user, password);
+function verificarLogin(email, password) {
+  const resultado = loginHandler(email, password);
   mensagem.value = resultado.mensagem;
   mensagemCor.value = resultado.cor;
   msg_authentication.value = resultado.msg_authentication;
-  auth.login(user, password);
+  auth.login(email, password);
   counter.increment();
   counter.count;
 }
