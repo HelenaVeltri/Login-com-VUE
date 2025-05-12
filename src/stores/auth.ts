@@ -1,13 +1,14 @@
 import { defineStore } from "pinia";
+import type { LoginForm } from "@/types/LoginForm";
 
 export const useAuthStore = defineStore("auth", {
   state: () => ({
     email: "",
     password: "",
-    loginHistory: [],
+    loginHistory: [] as LoginForm[], //informa explicitamente que o campo de loginHistory é um array de objetos que interface LoginForm
   }),
   actions: {
-    login(email, password) {
+    login(email: string, password: string) {
       this.email = email;
       this.password = password;
       console.log(

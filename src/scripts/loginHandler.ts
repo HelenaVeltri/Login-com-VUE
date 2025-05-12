@@ -1,14 +1,15 @@
-export function verificarLogin(email, password) {
+import type { LoginForm } from "@/types/LoginForm";
+export function verificarLogin(email: string, password: string) {
   console.log("Email:", email);
   console.log("Senha:", password);
-
-  if (email && password) {
+  const sanitizedEmail = (email || "").trim();
+  if (sanitizedEmail && password) {
     return {
       mensagem: "Bem vindo!",
       cor: "green",
       msg_authentication:
         "Autenticação com sucesso!<br> Email:" +
-        email +
+        sanitizedEmail +
         "<br> Senha: " +
         password,
     };

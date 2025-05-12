@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div id="nav">
-      <RouterLink to="/" class="link">Login</RouterLink> |
-      <RouterLink to="/home" class="link">Home</RouterLink>
+      <RouterLink to="/">Login</RouterLink> |
+      <RouterLink to="/home">Home</RouterLink>
     </div>
     <main>
       <RouterView />
@@ -19,15 +19,13 @@ export default {
 <style>
 body {
   margin: 0;
-  background-color: rgb(0, 139, 139);
+  background-color: #ffffff;
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: rgb(0, 0, 0);
 }
 #nav {
   padding: 30px;
-}
-.link {
-  color: white;
 }
 </style>
