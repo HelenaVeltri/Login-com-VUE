@@ -1,3 +1,11 @@
+## [1.3.4](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.3.3...v1.3.4) (2025-11-10)
+
+
+### Bug Fixes
+
+* mudança ([e136ee9](https://github.com/HelenaVeltri/Login-com-VUE/commit/e136ee9e429e5ea146451b09bc83344c4f127fe2))
+* um ajuste ai ([ef3e292](https://github.com/HelenaVeltri/Login-com-VUE/commit/ef3e2925fae77d40a0a91c823608ae965d8bdbda))
+
 ## [1.3.3](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.3.2...v1.3.3) (2025-11-10)
 
 ### Bug Fixes
