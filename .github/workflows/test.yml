@@ -32,13 +32,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
-      - name: Forçar release da test como pre-release
-        if: github.ref == 'refs/heads/teste'
-        run: |
-          VERSION=$(git describe --tags --abbrev=0)
-          gh release edit "$VERSION" --prerelease
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   release-test:
     if: github.ref == 'refs/heads/teste'
@@ -66,9 +59,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
-      - name: Forçar release da test como pre-release
-        run: |
-          VERSION=$(git describe --tags --abbrev=0)
-          gh release edit "$VERSION" --prerelease
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,3 +1,21 @@
+## [1.3.3](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.3.2...v1.3.3) (2025-11-10)
+
+### Bug Fixes
+
+- o pau que deu no release la vei ([2b1a80a](https://github.com/HelenaVeltri/Login-com-VUE/commit/2b1a80ad56cea37d418f61ac621c5984ecdb8630))
+
+## [1.3.2](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.3.1...v1.3.2) (2025-11-10)
+
+### Bug Fixes
+
+- versionamento ([db8b423](https://github.com/HelenaVeltri/Login-com-VUE/commit/db8b423914924951cc20a3e703f5cbbc0a698df1))
+
+## [1.3.1](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.3.0...v1.3.1) (2025-11-10)
+
+### Bug Fixes
+
+- MODIFICAÇÕES DE SEPARAÇÃO DE FLUXOS ([790b424](https://github.com/HelenaVeltri/Login-com-VUE/commit/790b424fb6ced52d7c616fcfc63b255ad6a26d2e))
+
 # [1.3.0](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.2.0...v1.3.0) (2025-11-10)
 
 ### Bug Fixes
