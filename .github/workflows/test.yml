@@ -32,7 +32,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
       - name: Forçar release da test como pre-release
-        if: github.ref == 'refs/heads/test'
+        if: github.ref == 'refs/heads/teste'
         run: |
           VERSION=$(git describe --tags --abbrev=0)
           gh release edit "$VERSION" --prerelease
