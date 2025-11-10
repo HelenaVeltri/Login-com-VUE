@@ -1,3 +1,16 @@
+# [1.1.0](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.0.0...v1.1.0) (2025-11-10)
+
+
+### Bug Fixes
+
+* ajuste exemplo ([037b88f](https://github.com/HelenaVeltri/Login-com-VUE/commit/037b88febdd8032f0fe53e431e79e67c348a810a))
+* MODIFICAÇÕES DE FUNCIONAMENT ([01bd534](https://github.com/HelenaVeltri/Login-com-VUE/commit/01bd534d0e8a9b663a722272688e534c49304129))
+
+
+### Features
+
+* commit de teste para release ([b14916a](https://github.com/HelenaVeltri/Login-com-VUE/commit/b14916a619ffb54ff76eb7ace4e8b47d42c695e2))
+
 # 1.0.0 (2025-11-10)
 
 
