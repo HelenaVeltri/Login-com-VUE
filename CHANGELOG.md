@@ -1,3 +1,17 @@
+# [1.4.0-teste.1](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.3.3...v1.4.0-teste.1) (2025-11-10)
+
+
+### Bug Fixes
+
+* bug fix bacanudo ([03c43dc](https://github.com/HelenaVeltri/Login-com-VUE/commit/03c43dcb41eb866e98361b8d73196ca0d91c7191))
+* um ajuste ai ([ef3e292](https://github.com/HelenaVeltri/Login-com-VUE/commit/ef3e2925fae77d40a0a91c823608ae965d8bdbda))
+
+
+### Features
+
+* CARAMBA MUDOU MUITOOOO ([04ca6ed](https://github.com/HelenaVeltri/Login-com-VUE/commit/04ca6ed70d17b223872217d89d87e63501b4d4ea))
+* CARAMBA MUDOU MUITOOOO ([7869bad](https://github.com/HelenaVeltri/Login-com-VUE/commit/7869badc203461e0bffb4861e50cd9065ab0b369))
+
 ## [1.3.3](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.3.2...v1.3.3) (2025-11-10)
 
 
