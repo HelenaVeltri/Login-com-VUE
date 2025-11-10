@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.3.1...v1.3.2) (2025-11-10)
+
+
+### Bug Fixes
+
+* versionamento ([db8b423](https://github.com/HelenaVeltri/Login-com-VUE/commit/db8b423914924951cc20a3e703f5cbbc0a698df1))
+
 ## [1.3.1](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.3.0...v1.3.1) (2025-11-10)
 
 
