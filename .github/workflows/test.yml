@@ -17,6 +17,7 @@ jobs:
           echo "Autor: ${{ github.actor }}"
           echo "Mensagem do commit:"
           echo "${{ github.event.head_commit.message }}"
+          echo "Secretgithub token: ${{ secrets.GITHUB_TOKEN }}"
       - name: Checkout source
         uses: actions/checkout@v4
         with:
@@ -27,6 +28,14 @@ jobs:
           node-version: "20"
       - name: Instalar dependências
         run: npm i
+      - name: Mostrar informações do merge 2
+        run: |
+          echo "Branch destino: ${{ github.ref_name }}"
+          echo "Evento: ${{ github.event_name }}"
+          echo "Autor: ${{ github.actor }}"
+          echo "Mensagem do commit:"
+          echo "${{ github.event.head_commit.message }}"
+          echo "Secretgithub token: ${{ secrets.GITHUB_TOKEN }}"
       - name: Executar semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
