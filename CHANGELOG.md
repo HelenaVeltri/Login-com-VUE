@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.3.0...v1.3.1) (2025-11-10)
+
+
+### Bug Fixes
+
+* MODIFICAÇÕES DE SEPARAÇÃO DE FLUXOS ([790b424](https://github.com/HelenaVeltri/Login-com-VUE/commit/790b424fb6ced52d7c616fcfc63b255ad6a26d2e))
+
 # [1.3.0](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.2.0...v1.3.0) (2025-11-10)
 
 
