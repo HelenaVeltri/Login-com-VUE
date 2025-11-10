@@ -73,7 +73,7 @@ const counter = useCounterStore();
 const msg_authentication = ref("");
 const router = useRouter();
 
-function verificarLogin(email, password) {
+function verificarLogin(email: string, password: string) {
   const resultado = loginHandler(email, password);
   mensagem.value = resultado.mensagem;
   mensagemCor.value = resultado.cor;
