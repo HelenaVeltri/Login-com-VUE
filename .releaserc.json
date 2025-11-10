@@ -1,5 +1,5 @@
 {
-  "branches": ["master", { "name": "test", "prerelease": true }],
+  "branches": ["master", { "name": "teste", "prerelease": true }],
   "plugins": [
     [
       "@semantic-release/commit-analyzer",
