@@ -18,7 +18,10 @@
           { "type": "ci", "release": false },
           { "type": "chore", "release": false },
           { "type": "revert", "release": false }
-        ]
+        ],
+        "parserOpts": {
+          "noteKeywords": ["BREAKING CHANGE", "BREAKING", "BREAKING CHANGES"]
+        }
       }
     ],
     [
@@ -40,12 +43,9 @@
         "npmPublish": false
       }
     ],
-    [
-      "@semantic-release/github",
-      {
-        "assets": "CHANGELOG.md"
-      }
-    ],
+
+    "@semantic-release/github",
+
     [
       "@semantic-release/git",
       {
