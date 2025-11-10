@@ -1,10 +1,7 @@
 name: autorelease
 
 on:
-  push:
-    branches:
-      - master
-      - teste
+  workflow_dispatch:
 
 jobs:
   release:
@@ -16,7 +13,6 @@ jobs:
           echo "Evento: ${{ github.event_name }}"
           echo "Autor: ${{ github.actor }}"
           echo "Mensagem do commit:"
-          echo "${{ github.event.head_commit.message }}"
           echo "Secretgithub token: ${{ secrets.GH_PAT }}"
       - name: Checkout source
         uses: actions/checkout@v4
@@ -28,14 +24,6 @@ jobs:
           node-version: "20"
       - name: Instalar dependências
         run: npm i
-      - name: Mostrar informações do merge 2
-        run: |
-          echo "Branch destino: ${{ github.ref_name }}"
-          echo "Evento: ${{ github.event_name }}"
-          echo "Autor: ${{ github.actor }}"
-          echo "Mensagem do commit:"
-          echo "${{ github.event.head_commit.message }}"
-          echo "Secretgithub token: ${{ secrets.GH_PAT }}"
       - name: Executar semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
