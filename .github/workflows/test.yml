@@ -7,7 +7,8 @@ on:
       - teste
 
 jobs:
-  release:
+  release-prod:
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
       - name: Mostrar informações do merge
@@ -16,7 +17,7 @@ jobs:
           echo "Evento: ${{ github.event_name }}"
           echo "Autor: ${{ github.actor }}"
           echo "Mensagem do commit:"
-          echo "Secretgithub token: ${{ secrets.GITHUB_TOKEN}}"
+          echo "MASTERRRRRRRRRRRR"
       - name: Checkout source
         uses: actions/checkout@v4
         with:
@@ -33,6 +34,39 @@ jobs:
         run: npx semantic-release
       - name: Forçar release da test como pre-release
         if: github.ref == 'refs/heads/teste'
+        run: |
+          VERSION=$(git describe --tags --abbrev=0)
+          gh release edit "$VERSION" --prerelease
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  release-test:
+    if: github.ref == 'refs/heads/teste'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mostrar informações do merge
+        run: |
+          echo "Branch destino: ${{ github.ref_name }}"
+          echo "Evento: ${{ github.event_name }}"
+          echo "Autor: ${{ github.actor }}"
+          echo "Mensagem do commit:"
+          echo "Secretgithub token: ${{ secrets.GITHUB_TOKEN}}"
+          echo "Bananilson farofa é legal pra caramba"
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Instalar dependências
+        run: npm i
+      - name: Executar semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release
+      - name: Forçar release da test como pre-release
         run: |
           VERSION=$(git describe --tags --abbrev=0)
           gh release edit "$VERSION" --prerelease
