@@ -13,7 +13,7 @@ jobs:
           echo "Evento: ${{ github.event_name }}"
           echo "Autor: ${{ github.actor }}"
           echo "Mensagem do commit:"
-          echo "Secretgithub token: ${{ secrets.GH_PAT }}"
+          echo "Secretgithub token: ${{ secrets.GITHUB_TOKEN}}"
       - name: Checkout source
         uses: actions/checkout@v4
         with:
@@ -26,5 +26,5 @@ jobs:
         run: npm i
       - name: Executar semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
