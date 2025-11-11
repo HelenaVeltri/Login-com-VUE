@@ -32,7 +32,20 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
-
+  deu_certo:
+    needs: release-prod
+    if: ${{needs.release-prod.result == 'success'}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mostrar informações do merge
+        run: |
+          echo "Resultado: ${{ needs.release-prod.result }}" 
+          echo "Branch destino: ${{ github.ref_name }}"
+          echo "Evento: ${{ github.event_name }}"
+          echo "Autor: ${{ github.actor }}"
+          echo "Mensagem do commit:"
+          echo "MASTERRRRRRRRRRRR"
+          
   release-test:
     if: github.ref == 'refs/heads/teste'
     runs-on: ubuntu-latest
@@ -59,3 +72,17 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
+
+  deu_certo:
+    needs: release-test
+    if: ${{needs.release-test.result == 'success'}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mostrar informações do merge
+        run: |
+          echo "Resultado: ${{ needs.release-test.result }}" 
+          echo "Branch destino: ${{ github.ref_name }}"
+          echo "Evento: ${{ github.event_name }}"
+          echo "Autor: ${{ github.actor }}"
+          echo "Mensagem do commit:"
+          echo "MASTERRRRRRRRRRRR"
