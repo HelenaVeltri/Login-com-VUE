@@ -1,3 +1,13 @@
+## [1.4.2](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.4.1...v1.4.2) (2025-11-11)
+
+
+### Bug Fixes
+
+* ajusta ([532e072](https://github.com/HelenaVeltri/Login-com-VUE/commit/532e0729311897951259ed4a0bcbd99a99a10a83))
+* ajusta ([f34a6f6](https://github.com/HelenaVeltri/Login-com-VUE/commit/f34a6f6918715089c220f24d1003dd1a19348dfd))
+* ajusta MAIS DOG ([1f188d1](https://github.com/HelenaVeltri/Login-com-VUE/commit/1f188d13d24bb84b5eba7f07001221e363f59f68))
+* ajuste de funcionamento aleatorio muito massa ([5f35835](https://github.com/HelenaVeltri/Login-com-VUE/commit/5f358356196b6a66d70e671a95951b80436c9bef))
+
 # [1.4.0-teste.2](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.4.0-teste.1...v1.4.0-teste.2) (2025-11-11)
 
 
