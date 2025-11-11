@@ -45,7 +45,7 @@ jobs:
           echo "Autor: ${{ github.actor }}"
           echo "Mensagem do commit:"
           echo "MASTERRRRRRRRRRRR"
-          
+
   release-test:
     if: github.ref == 'refs/heads/teste'
     runs-on: ubuntu-latest
@@ -73,7 +73,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
 
-  deu_certo:
+  deu_certoo:
     needs: release-test
     if: ${{needs.release-test.result == 'success'}}
     runs-on: ubuntu-latest
