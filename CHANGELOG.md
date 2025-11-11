@@ -1,30 +1,24 @@
-## [1.4.1](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.4.0...v1.4.1) (2025-11-11)
+# [1.4.0-teste.2](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.4.0-teste.1...v1.4.0-teste.2) (2025-11-11)
 
 
 ### Bug Fixes
 
-* modificação de nomeclatura para pre-releases ([410780f](https://github.com/HelenaVeltri/Login-com-VUE/commit/410780feda4ad1af2295c58d8411d56724fd2339))
+* ajusta ([f34a6f6](https://github.com/HelenaVeltri/Login-com-VUE/commit/f34a6f6918715089c220f24d1003dd1a19348dfd))
+* ajuste de funcionamento aleatorio muito massa ([5f35835](https://github.com/HelenaVeltri/Login-com-VUE/commit/5f358356196b6a66d70e671a95951b80436c9bef))
 
-# [1.4.0](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.3.4...v1.4.0) (2025-11-10)
+# [1.4.0-teste.1](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.3.3...v1.4.0-teste.1) (2025-11-10)
 
 
 ### Bug Fixes
 
 * bug fix bacanudo ([03c43dc](https://github.com/HelenaVeltri/Login-com-VUE/commit/03c43dcb41eb866e98361b8d73196ca0d91c7191))
+* um ajuste ai ([ef3e292](https://github.com/HelenaVeltri/Login-com-VUE/commit/ef3e2925fae77d40a0a91c823608ae965d8bdbda))
 
 
 ### Features
 
 * CARAMBA MUDOU MUITOOOO ([04ca6ed](https://github.com/HelenaVeltri/Login-com-VUE/commit/04ca6ed70d17b223872217d89d87e63501b4d4ea))
 * CARAMBA MUDOU MUITOOOO ([7869bad](https://github.com/HelenaVeltri/Login-com-VUE/commit/7869badc203461e0bffb4861e50cd9065ab0b369))
-
-## [1.3.4](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.3.3...v1.3.4) (2025-11-10)
-
-
-### Bug Fixes
-
-* mudança ([e136ee9](https://github.com/HelenaVeltri/Login-com-VUE/commit/e136ee9e429e5ea146451b09bc83344c4f127fe2))
-* um ajuste ai ([ef3e292](https://github.com/HelenaVeltri/Login-com-VUE/commit/ef3e2925fae77d40a0a91c823608ae965d8bdbda))
 
 ## [1.3.3](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.3.2...v1.3.3) (2025-11-10)
 
