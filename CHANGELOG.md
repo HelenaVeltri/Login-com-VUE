@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.5.0...v1.5.1) (2025-11-11)
+
+
+### Bug Fixes
+
+* ajusta MAIS DOG ([41d5b91](https://github.com/HelenaVeltri/Login-com-VUE/commit/41d5b91b5f6218ca2f53457e9ed1903d77a4ebff))
+
 # [1.5.0](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.4.2...v1.5.0) (2025-11-11)
 
 
