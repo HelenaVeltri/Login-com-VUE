@@ -1,4 +1,4 @@
-name: autorelease
+name: autoreleasee
 
 on:
   push:
@@ -16,8 +16,7 @@ jobs:
           echo "Branch destino: ${{ github.ref_name }}"
           echo "Evento: ${{ github.event_name }}"
           echo "Autor: ${{ github.actor }}"
-          echo "Mensagem do commit:"
-          echo "MASTERRRRRRRRRRRR"
+          echo "Mensagem do commit: ${{github.event.head_commit.message}}"
       - name: Checkout source
         uses: actions/checkout@v4
         with:
@@ -32,9 +31,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
-  deu_certo:
+  deploy-prod:
     needs: release-prod
-    if: ${{needs.release-prod.result == 'success'}}
+    if: ${{needs.release-prod.result == 'failure'}}
     runs-on: ubuntu-latest
     steps:
       - name: Mostrar informações do merge
@@ -43,8 +42,7 @@ jobs:
           echo "Branch destino: ${{ github.ref_name }}"
           echo "Evento: ${{ github.event_name }}"
           echo "Autor: ${{ github.actor }}"
-          echo "Mensagem do commit:"
-          echo "MASTERRRRRRRRRRRR"
+          echo "Mensagem do commit: ${{github.event.head_commit.message}}"
 
   release-test:
     if: github.ref == 'refs/heads/teste'
@@ -55,9 +53,7 @@ jobs:
           echo "Branch destino: ${{ github.ref_name }}"
           echo "Evento: ${{ github.event_name }}"
           echo "Autor: ${{ github.actor }}"
-          echo "Mensagem do commit:"
-          echo "Secretgithub token: ${{ secrets.GITHUB_TOKEN}}"
-          echo "Bananilson farofa é legal pra caramba"
+          echo "Mensagem do commit: ${{github.event.head_commit.message}}"
       - name: Checkout source
         uses: actions/checkout@v4
         with:
@@ -72,8 +68,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
-
-  deu_certoo:
+  deploy-test:
     needs: release-test
     if: ${{needs.release-test.result == 'success'}}
     runs-on: ubuntu-latest
