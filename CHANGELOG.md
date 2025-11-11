@@ -1,3 +1,11 @@
+## [1.5.2](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.5.1...v1.5.2) (2025-11-11)
+
+
+### Bug Fixes
+
+* fixei dog ([f63535b](https://github.com/HelenaVeltri/Login-com-VUE/commit/f63535b84fc4130bc15cc509b885c88172d339b7))
+* teste ([93dd68a](https://github.com/HelenaVeltri/Login-com-VUE/commit/93dd68a012c0b70325447c03b47c1000b6f6beb9))
+
 ## [1.5.1](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.5.0...v1.5.1) (2025-11-11)
 
 
