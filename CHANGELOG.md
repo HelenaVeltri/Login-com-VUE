@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.4.0...v1.4.1) (2025-11-11)
+
+
+### Bug Fixes
+
+* modificação de nomeclatura para pre-releases ([410780f](https://github.com/HelenaVeltri/Login-com-VUE/commit/410780feda4ad1af2295c58d8411d56724fd2339))
+
 # [1.4.0](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.3.4...v1.4.0) (2025-11-10)
 
 
