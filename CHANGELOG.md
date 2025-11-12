@@ -1,3 +1,9 @@
+## [1.4.0-beta.3](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.4.0-beta.2...v1.4.0-beta.3) (2025-11-12)
+
+### Bug Fixes
+
+* coisa ([6a5edd1](https://github.com/HelenaVeltri/Login-com-VUE/commit/6a5edd187cae94cf004609c560c5fc4624fbb89a))
+
 # [1.4.0-beta.2](https://github.com/HelenaVeltri/Login-com-VUE/compare/v1.4.0-beta.1...v1.4.0-beta.2) (2025-11-11)
 
 
